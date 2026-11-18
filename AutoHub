@@ -172,40 +172,40 @@ ui_UICorner_11.Name = "UICorner"
 ui_UICorner_11.CornerRadius = UDim.new(0, 4)
 ui_UICorner_11.Parent = ui_Frame_10
 
--- إنشاء: TextButton (TextButton)
-local ui_TextButton_12 = Instance.new("TextButton")
-ui_TextButton_12.Name = "TextButton"
-ui_TextButton_12.AnchorPoint = Vector2.new(0, 0)
-ui_TextButton_12.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-ui_TextButton_12.BackgroundTransparency = 0
-ui_TextButton_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ui_TextButton_12.BorderSizePixel = 0
-ui_TextButton_12.Position = UDim2.new(0.673077, 0, 0.147239, 0)
-ui_TextButton_12.Rotation = 0
-ui_TextButton_12.Size = UDim2.new(0.278846, 0, 0.177914, 0)
-ui_TextButton_12.SizeConstraint = Enum.SizeConstraint.RelativeXY
-ui_TextButton_12.Visible = true
-ui_TextButton_12.ZIndex = 1
-ui_TextButton_12.ClipsDescendants = false
-ui_TextButton_12.LayoutOrder = 0
-ui_TextButton_12.Text = "Melee"
-ui_TextButton_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-ui_TextButton_12.TextSize = 14
-ui_TextButton_12.TextScaled = false
-ui_TextButton_12.TextWrapped = false
-ui_TextButton_12.TextXAlignment = Enum.TextXAlignment.Center
-ui_TextButton_12.TextYAlignment = Enum.TextYAlignment.Center
-ui_TextButton_12.RichText = false
-ui_TextButton_12.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-ui_TextButton_12.TextTransparency = 0
-ui_TextButton_12.AutoButtonColor = true
-ui_TextButton_12.Parent = ui_MainFrame_2
+-- إنشاء: MeleeBtn (TextButton)
+local ui_MeleeBtn_12 = Instance.new("TextButton")
+ui_MeleeBtn_12.Name = "MeleeBtn"
+ui_MeleeBtn_12.AnchorPoint = Vector2.new(0, 0)
+ui_MeleeBtn_12.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ui_MeleeBtn_12.BackgroundTransparency = 0
+ui_MeleeBtn_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_MeleeBtn_12.BorderSizePixel = 0
+ui_MeleeBtn_12.Position = UDim2.new(0.673077, 0, 0.147239, 0)
+ui_MeleeBtn_12.Rotation = 0
+ui_MeleeBtn_12.Size = UDim2.new(0.278846, 0, 0.177914, 0)
+ui_MeleeBtn_12.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_MeleeBtn_12.Visible = true
+ui_MeleeBtn_12.ZIndex = 1
+ui_MeleeBtn_12.ClipsDescendants = false
+ui_MeleeBtn_12.LayoutOrder = 0
+ui_MeleeBtn_12.Text = "Melee"
+ui_MeleeBtn_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_MeleeBtn_12.TextSize = 14
+ui_MeleeBtn_12.TextScaled = false
+ui_MeleeBtn_12.TextWrapped = false
+ui_MeleeBtn_12.TextXAlignment = Enum.TextXAlignment.Center
+ui_MeleeBtn_12.TextYAlignment = Enum.TextYAlignment.Center
+ui_MeleeBtn_12.RichText = false
+ui_MeleeBtn_12.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_MeleeBtn_12.TextTransparency = 0
+ui_MeleeBtn_12.AutoButtonColor = true
+ui_MeleeBtn_12.Parent = ui_MainFrame_2
 
 -- إنشاء: UICorner (UICorner)
 local ui_UICorner_13 = Instance.new("UICorner")
 ui_UICorner_13.Name = "UICorner"
 ui_UICorner_13.CornerRadius = UDim.new(0, 4)
-ui_UICorner_13.Parent = ui_TextButton_12
+ui_UICorner_13.Parent = ui_MeleeBtn_12
 
 -- إنشاء: UIStroke (UIStroke)
 local ui_UIStroke_14 = Instance.new("UIStroke")
@@ -215,42 +215,42 @@ ui_UIStroke_14.Thickness = 2
 ui_UIStroke_14.Transparency = 0
 ui_UIStroke_14.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 ui_UIStroke_14.LineJoinMode = Enum.LineJoinMode.Round
-ui_UIStroke_14.Parent = ui_TextButton_12
+ui_UIStroke_14.Parent = ui_MeleeBtn_12
 
--- إنشاء: TextButton (TextButton)
-local ui_TextButton_15 = Instance.new("TextButton")
-ui_TextButton_15.Name = "TextButton"
-ui_TextButton_15.AnchorPoint = Vector2.new(0, 0)
-ui_TextButton_15.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-ui_TextButton_15.BackgroundTransparency = 0
-ui_TextButton_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ui_TextButton_15.BorderSizePixel = 0
-ui_TextButton_15.Position = UDim2.new(0.673077, 0, 0.411043, 0)
-ui_TextButton_15.Rotation = 0
-ui_TextButton_15.Size = UDim2.new(0.278846, 0, 0.177914, 0)
-ui_TextButton_15.SizeConstraint = Enum.SizeConstraint.RelativeXY
-ui_TextButton_15.Visible = true
-ui_TextButton_15.ZIndex = 1
-ui_TextButton_15.ClipsDescendants = false
-ui_TextButton_15.LayoutOrder = 0
-ui_TextButton_15.Text = "Fruit"
-ui_TextButton_15.TextColor3 = Color3.fromRGB(255, 255, 255)
-ui_TextButton_15.TextSize = 14
-ui_TextButton_15.TextScaled = false
-ui_TextButton_15.TextWrapped = false
-ui_TextButton_15.TextXAlignment = Enum.TextXAlignment.Center
-ui_TextButton_15.TextYAlignment = Enum.TextYAlignment.Center
-ui_TextButton_15.RichText = false
-ui_TextButton_15.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-ui_TextButton_15.TextTransparency = 0
-ui_TextButton_15.AutoButtonColor = true
-ui_TextButton_15.Parent = ui_MainFrame_2
+-- إنشاء: FruitBtn (TextButton)
+local ui_FruitBtn_15 = Instance.new("TextButton")
+ui_FruitBtn_15.Name = "FruitBtn"
+ui_FruitBtn_15.AnchorPoint = Vector2.new(0, 0)
+ui_FruitBtn_15.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ui_FruitBtn_15.BackgroundTransparency = 0
+ui_FruitBtn_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_FruitBtn_15.BorderSizePixel = 0
+ui_FruitBtn_15.Position = UDim2.new(0.673077, 0, 0.411043, 0)
+ui_FruitBtn_15.Rotation = 0
+ui_FruitBtn_15.Size = UDim2.new(0.278846, 0, 0.177914, 0)
+ui_FruitBtn_15.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_FruitBtn_15.Visible = true
+ui_FruitBtn_15.ZIndex = 1
+ui_FruitBtn_15.ClipsDescendants = false
+ui_FruitBtn_15.LayoutOrder = 0
+ui_FruitBtn_15.Text = "Fruit"
+ui_FruitBtn_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_FruitBtn_15.TextSize = 14
+ui_FruitBtn_15.TextScaled = false
+ui_FruitBtn_15.TextWrapped = false
+ui_FruitBtn_15.TextXAlignment = Enum.TextXAlignment.Center
+ui_FruitBtn_15.TextYAlignment = Enum.TextYAlignment.Center
+ui_FruitBtn_15.RichText = false
+ui_FruitBtn_15.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_FruitBtn_15.TextTransparency = 0
+ui_FruitBtn_15.AutoButtonColor = true
+ui_FruitBtn_15.Parent = ui_MainFrame_2
 
 -- إنشاء: UICorner (UICorner)
 local ui_UICorner_16 = Instance.new("UICorner")
 ui_UICorner_16.Name = "UICorner"
 ui_UICorner_16.CornerRadius = UDim.new(0, 4)
-ui_UICorner_16.Parent = ui_TextButton_15
+ui_UICorner_16.Parent = ui_FruitBtn_15
 
 -- إنشاء: UIStroke (UIStroke)
 local ui_UIStroke_17 = Instance.new("UIStroke")
@@ -260,42 +260,42 @@ ui_UIStroke_17.Thickness = 2
 ui_UIStroke_17.Transparency = 0
 ui_UIStroke_17.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 ui_UIStroke_17.LineJoinMode = Enum.LineJoinMode.Round
-ui_UIStroke_17.Parent = ui_TextButton_15
+ui_UIStroke_17.Parent = ui_FruitBtn_15
 
--- إنشاء: TextButton (TextButton)
-local ui_TextButton_18 = Instance.new("TextButton")
-ui_TextButton_18.Name = "TextButton"
-ui_TextButton_18.AnchorPoint = Vector2.new(0, 0)
-ui_TextButton_18.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-ui_TextButton_18.BackgroundTransparency = 0
-ui_TextButton_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ui_TextButton_18.BorderSizePixel = 0
-ui_TextButton_18.Position = UDim2.new(0.673077, 0, 0.668712, 0)
-ui_TextButton_18.Rotation = 0
-ui_TextButton_18.Size = UDim2.new(0.278846, 0, 0.177914, 0)
-ui_TextButton_18.SizeConstraint = Enum.SizeConstraint.RelativeXY
-ui_TextButton_18.Visible = true
-ui_TextButton_18.ZIndex = 1
-ui_TextButton_18.ClipsDescendants = false
-ui_TextButton_18.LayoutOrder = 0
-ui_TextButton_18.Text = "Sword"
-ui_TextButton_18.TextColor3 = Color3.fromRGB(255, 255, 255)
-ui_TextButton_18.TextSize = 14
-ui_TextButton_18.TextScaled = false
-ui_TextButton_18.TextWrapped = false
-ui_TextButton_18.TextXAlignment = Enum.TextXAlignment.Center
-ui_TextButton_18.TextYAlignment = Enum.TextYAlignment.Center
-ui_TextButton_18.RichText = false
-ui_TextButton_18.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-ui_TextButton_18.TextTransparency = 0
-ui_TextButton_18.AutoButtonColor = true
-ui_TextButton_18.Parent = ui_MainFrame_2
+-- إنشاء: SwordBtn (TextButton)
+local ui_SwordBtn_18 = Instance.new("TextButton")
+ui_SwordBtn_18.Name = "SwordBtn"
+ui_SwordBtn_18.AnchorPoint = Vector2.new(0, 0)
+ui_SwordBtn_18.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ui_SwordBtn_18.BackgroundTransparency = 0
+ui_SwordBtn_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_SwordBtn_18.BorderSizePixel = 0
+ui_SwordBtn_18.Position = UDim2.new(0.673077, 0, 0.668712, 0)
+ui_SwordBtn_18.Rotation = 0
+ui_SwordBtn_18.Size = UDim2.new(0.278846, 0, 0.177914, 0)
+ui_SwordBtn_18.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_SwordBtn_18.Visible = true
+ui_SwordBtn_18.ZIndex = 1
+ui_SwordBtn_18.ClipsDescendants = false
+ui_SwordBtn_18.LayoutOrder = 0
+ui_SwordBtn_18.Text = "Sword"
+ui_SwordBtn_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_SwordBtn_18.TextSize = 14
+ui_SwordBtn_18.TextScaled = false
+ui_SwordBtn_18.TextWrapped = false
+ui_SwordBtn_18.TextXAlignment = Enum.TextXAlignment.Center
+ui_SwordBtn_18.TextYAlignment = Enum.TextYAlignment.Center
+ui_SwordBtn_18.RichText = false
+ui_SwordBtn_18.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_SwordBtn_18.TextTransparency = 0
+ui_SwordBtn_18.AutoButtonColor = true
+ui_SwordBtn_18.Parent = ui_MainFrame_2
 
 -- إنشاء: UICorner (UICorner)
 local ui_UICorner_19 = Instance.new("UICorner")
 ui_UICorner_19.Name = "UICorner"
 ui_UICorner_19.CornerRadius = UDim.new(0, 4)
-ui_UICorner_19.Parent = ui_TextButton_18
+ui_UICorner_19.Parent = ui_SwordBtn_18
 
 -- إنشاء: UIStroke (UIStroke)
 local ui_UIStroke_20 = Instance.new("UIStroke")
@@ -305,7 +305,7 @@ ui_UIStroke_20.Thickness = 2
 ui_UIStroke_20.Transparency = 0
 ui_UIStroke_20.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 ui_UIStroke_20.LineJoinMode = Enum.LineJoinMode.Round
-ui_UIStroke_20.Parent = ui_TextButton_18
+ui_UIStroke_20.Parent = ui_SwordBtn_18
 
 --// ==========================================
 --// البرمجات المدمجة التي كانت داخل الواجهة
@@ -323,8 +323,8 @@ task.spawn(function()
 	local player = Players.LocalPlayer
 	local backpack = player:WaitForChild("Backpack")
 	
-	-- مسار الريموت إيفينت المحدث: ReplicatedStorage.Remotes.SubclassNetwork.QuestUpdate
-	local remoteEvent = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("SubclassNetwork"):WaitForChild("QuestUpdate")
+	-- مسار الريموت إيفينت المحدث: ReplicatedStorage.Remotes.QuestUpdate
+	local remoteEvent = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("QuestUpdate")
 	
 	local mainButton = script.Parent -- زر التشغيل الرئيسي (Auto Farm Button)
 	
@@ -339,9 +339,9 @@ task.spawn(function()
 		local buttons = {meleeBtn, fruitBtn, swordBtn}
 		for _, btn in ipairs(buttons) do
 			if btn == selectedBtn then
-				btn.BackgroundColor3 = Color3.fromRGB(100, 255, 65) -- أخضر
+				btn.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- أخضر
 			else
-				btn.BackgroundColor3 = Color3.fromRGB(33, 33, 33) -- أبيض أو اللون الافتراضي
+				btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- أبيض أو اللون العادي
 			end
 		end
 	end
