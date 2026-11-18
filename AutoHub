@@ -23,7 +23,7 @@ ui_MainFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ui_MainFrame_2.BorderSizePixel = 0
 ui_MainFrame_2.Position = UDim2.new(0.389965, 0, 0.357414, 0)
 ui_MainFrame_2.Rotation = 0
-ui_MainFrame_2.Size = UDim2.new(0.22007, 0, 0.285171, 0)
+ui_MainFrame_2.Size = UDim2.new(0.274648, 0, 0.309886, 0)
 ui_MainFrame_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
 ui_MainFrame_2.Visible = true
 ui_MainFrame_2.ZIndex = 1
@@ -39,9 +39,9 @@ ui_ToggleBtn_3.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
 ui_ToggleBtn_3.BackgroundTransparency = 0
 ui_ToggleBtn_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ui_ToggleBtn_3.BorderSizePixel = 0
-ui_ToggleBtn_3.Position = UDim2.new(0.1, 0, 0.54, 0)
+ui_ToggleBtn_3.Position = UDim2.new(0.0391026, 0, 0.454111, 0)
 ui_ToggleBtn_3.Rotation = 0
-ui_ToggleBtn_3.Size = UDim2.new(0.8, 0, 0.333333, 0)
+ui_ToggleBtn_3.Size = UDim2.new(0.497513, 0, 0.216769, 0)
 ui_ToggleBtn_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
 ui_ToggleBtn_3.Visible = true
 ui_ToggleBtn_3.ZIndex = 1
@@ -55,7 +55,7 @@ ui_ToggleBtn_3.TextWrapped = false
 ui_ToggleBtn_3.TextXAlignment = Enum.TextXAlignment.Center
 ui_ToggleBtn_3.TextYAlignment = Enum.TextYAlignment.Center
 ui_ToggleBtn_3.RichText = false
-ui_ToggleBtn_3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_ToggleBtn_3.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 ui_ToggleBtn_3.TextTransparency = 0
 ui_ToggleBtn_3.AutoButtonColor = true
 ui_ToggleBtn_3.Parent = ui_MainFrame_2
@@ -100,9 +100,9 @@ ui_Title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ui_Title_8.BackgroundTransparency = 1
 ui_Title_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ui_Title_8.BorderSizePixel = 0
-ui_Title_8.Position = UDim2.new(0.1, 0, 0.0466667, 0)
+ui_Title_8.Position = UDim2.new(0.0391025, 0, 0.0466666, 0)
 ui_Title_8.Rotation = 0
-ui_Title_8.Size = UDim2.new(0.8, 0, 0.22, 0)
+ui_Title_8.Size = UDim2.new(0.476282, 0, 0.22, 0)
 ui_Title_8.SizeConstraint = Enum.SizeConstraint.RelativeXY
 ui_Title_8.Visible = true
 ui_Title_8.ZIndex = 1
@@ -116,7 +116,7 @@ ui_Title_8.TextWrapped = true
 ui_Title_8.TextXAlignment = Enum.TextXAlignment.Center
 ui_Title_8.TextYAlignment = Enum.TextYAlignment.Center
 ui_Title_8.RichText = false
-ui_Title_8.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_Title_8.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 ui_Title_8.TextTransparency = 0
 ui_Title_8.Parent = ui_MainFrame_2
 
@@ -128,7 +128,7 @@ ui_Level_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ui_Level_9.BackgroundTransparency = 1
 ui_Level_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ui_Level_9.BorderSizePixel = 0
-ui_Level_9.Position = UDim2.new(0.344, 0, 0.266667, 0)
+ui_Level_9.Position = UDim2.new(0.0363077, 0, 0.260532, 0)
 ui_Level_9.Rotation = 0
 ui_Level_9.Size = UDim2.new(0.308, 0, 0.113333, 0)
 ui_Level_9.SizeConstraint = Enum.SizeConstraint.RelativeXY
@@ -144,54 +144,213 @@ ui_Level_9.TextWrapped = true
 ui_Level_9.TextXAlignment = Enum.TextXAlignment.Center
 ui_Level_9.TextYAlignment = Enum.TextYAlignment.Center
 ui_Level_9.RichText = false
-ui_Level_9.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_Level_9.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 ui_Level_9.TextTransparency = 0
 ui_Level_9.Parent = ui_MainFrame_2
 
--- إنشاء: ToggleButton (TextButton)
-local ui_ToggleButton_10 = Instance.new("TextButton")
-ui_ToggleButton_10.Name = "ToggleButton"
-ui_ToggleButton_10.AnchorPoint = Vector2.new(0, 0)
-ui_ToggleButton_10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ui_ToggleButton_10.BackgroundTransparency = 0
-ui_ToggleButton_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ui_ToggleButton_10.BorderSizePixel = 0
-ui_ToggleButton_10.Position = UDim2.new(0.288732, 0, 0.262357, 0)
-ui_ToggleButton_10.Rotation = 0
-ui_ToggleButton_10.Size = UDim2.new(0.0440141, 0, 0.095057, 0)
-ui_ToggleButton_10.SizeConstraint = Enum.SizeConstraint.RelativeXY
-ui_ToggleButton_10.Visible = true
-ui_ToggleButton_10.ZIndex = 1
-ui_ToggleButton_10.ClipsDescendants = false
-ui_ToggleButton_10.LayoutOrder = 0
-ui_ToggleButton_10.Text = "A"
-ui_ToggleButton_10.TextColor3 = Color3.fromRGB(255, 0, 0)
-ui_ToggleButton_10.TextSize = 25
-ui_ToggleButton_10.TextScaled = false
-ui_ToggleButton_10.TextWrapped = true
-ui_ToggleButton_10.TextXAlignment = Enum.TextXAlignment.Center
-ui_ToggleButton_10.TextYAlignment = Enum.TextYAlignment.Center
-ui_ToggleButton_10.RichText = false
-ui_ToggleButton_10.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-ui_ToggleButton_10.TextTransparency = 0
-ui_ToggleButton_10.AutoButtonColor = true
-ui_ToggleButton_10.Parent = ui_AutoLevelGui_1
+-- إنشاء: Frame (Frame)
+local ui_Frame_10 = Instance.new("Frame")
+ui_Frame_10.Name = "Frame"
+ui_Frame_10.AnchorPoint = Vector2.new(0, 0)
+ui_Frame_10.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+ui_Frame_10.BackgroundTransparency = 0
+ui_Frame_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_Frame_10.BorderSizePixel = 0
+ui_Frame_10.Position = UDim2.new(0.650641, 0, 0.0920245, 0)
+ui_Frame_10.Rotation = 0
+ui_Frame_10.Size = UDim2.new(0.320513, 0, 0.840491, 0)
+ui_Frame_10.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_Frame_10.Visible = true
+ui_Frame_10.ZIndex = 1
+ui_Frame_10.ClipsDescendants = false
+ui_Frame_10.LayoutOrder = 0
+ui_Frame_10.Parent = ui_MainFrame_2
 
 -- إنشاء: UICorner (UICorner)
 local ui_UICorner_11 = Instance.new("UICorner")
 ui_UICorner_11.Name = "UICorner"
-ui_UICorner_11.CornerRadius = UDim.new(0, 8)
-ui_UICorner_11.Parent = ui_ToggleButton_10
+ui_UICorner_11.CornerRadius = UDim.new(0, 4)
+ui_UICorner_11.Parent = ui_Frame_10
+
+-- إنشاء: TextButton (TextButton)
+local ui_TextButton_12 = Instance.new("TextButton")
+ui_TextButton_12.Name = "TextButton"
+ui_TextButton_12.AnchorPoint = Vector2.new(0, 0)
+ui_TextButton_12.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ui_TextButton_12.BackgroundTransparency = 0
+ui_TextButton_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_TextButton_12.BorderSizePixel = 0
+ui_TextButton_12.Position = UDim2.new(0.673077, 0, 0.147239, 0)
+ui_TextButton_12.Rotation = 0
+ui_TextButton_12.Size = UDim2.new(0.278846, 0, 0.177914, 0)
+ui_TextButton_12.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_TextButton_12.Visible = true
+ui_TextButton_12.ZIndex = 1
+ui_TextButton_12.ClipsDescendants = false
+ui_TextButton_12.LayoutOrder = 0
+ui_TextButton_12.Text = "Melee"
+ui_TextButton_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_TextButton_12.TextSize = 14
+ui_TextButton_12.TextScaled = false
+ui_TextButton_12.TextWrapped = false
+ui_TextButton_12.TextXAlignment = Enum.TextXAlignment.Center
+ui_TextButton_12.TextYAlignment = Enum.TextYAlignment.Center
+ui_TextButton_12.RichText = false
+ui_TextButton_12.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_TextButton_12.TextTransparency = 0
+ui_TextButton_12.AutoButtonColor = true
+ui_TextButton_12.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_13 = Instance.new("UICorner")
+ui_UICorner_13.Name = "UICorner"
+ui_UICorner_13.CornerRadius = UDim.new(0, 4)
+ui_UICorner_13.Parent = ui_TextButton_12
 
 -- إنشاء: UIStroke (UIStroke)
-local ui_UIStroke_12 = Instance.new("UIStroke")
-ui_UIStroke_12.Name = "UIStroke"
-ui_UIStroke_12.Color = Color3.fromRGB(255, 0, 0)
-ui_UIStroke_12.Thickness = 2
-ui_UIStroke_12.Transparency = 0
-ui_UIStroke_12.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-ui_UIStroke_12.LineJoinMode = Enum.LineJoinMode.Round
-ui_UIStroke_12.Parent = ui_ToggleButton_10
+local ui_UIStroke_14 = Instance.new("UIStroke")
+ui_UIStroke_14.Name = "UIStroke"
+ui_UIStroke_14.Color = Color3.fromRGB(255, 0, 0)
+ui_UIStroke_14.Thickness = 2
+ui_UIStroke_14.Transparency = 0
+ui_UIStroke_14.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_14.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_14.Parent = ui_TextButton_12
+
+-- إنشاء: TextButton (TextButton)
+local ui_TextButton_15 = Instance.new("TextButton")
+ui_TextButton_15.Name = "TextButton"
+ui_TextButton_15.AnchorPoint = Vector2.new(0, 0)
+ui_TextButton_15.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ui_TextButton_15.BackgroundTransparency = 0
+ui_TextButton_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_TextButton_15.BorderSizePixel = 0
+ui_TextButton_15.Position = UDim2.new(0.673077, 0, 0.411043, 0)
+ui_TextButton_15.Rotation = 0
+ui_TextButton_15.Size = UDim2.new(0.278846, 0, 0.177914, 0)
+ui_TextButton_15.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_TextButton_15.Visible = true
+ui_TextButton_15.ZIndex = 1
+ui_TextButton_15.ClipsDescendants = false
+ui_TextButton_15.LayoutOrder = 0
+ui_TextButton_15.Text = "Fruit"
+ui_TextButton_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_TextButton_15.TextSize = 14
+ui_TextButton_15.TextScaled = false
+ui_TextButton_15.TextWrapped = false
+ui_TextButton_15.TextXAlignment = Enum.TextXAlignment.Center
+ui_TextButton_15.TextYAlignment = Enum.TextYAlignment.Center
+ui_TextButton_15.RichText = false
+ui_TextButton_15.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_TextButton_15.TextTransparency = 0
+ui_TextButton_15.AutoButtonColor = true
+ui_TextButton_15.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_16 = Instance.new("UICorner")
+ui_UICorner_16.Name = "UICorner"
+ui_UICorner_16.CornerRadius = UDim.new(0, 4)
+ui_UICorner_16.Parent = ui_TextButton_15
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_17 = Instance.new("UIStroke")
+ui_UIStroke_17.Name = "UIStroke"
+ui_UIStroke_17.Color = Color3.fromRGB(255, 0, 0)
+ui_UIStroke_17.Thickness = 2
+ui_UIStroke_17.Transparency = 0
+ui_UIStroke_17.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_17.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_17.Parent = ui_TextButton_15
+
+-- إنشاء: TextButton (TextButton)
+local ui_TextButton_18 = Instance.new("TextButton")
+ui_TextButton_18.Name = "TextButton"
+ui_TextButton_18.AnchorPoint = Vector2.new(0, 0)
+ui_TextButton_18.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ui_TextButton_18.BackgroundTransparency = 0
+ui_TextButton_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_TextButton_18.BorderSizePixel = 0
+ui_TextButton_18.Position = UDim2.new(0.673077, 0, 0.668712, 0)
+ui_TextButton_18.Rotation = 0
+ui_TextButton_18.Size = UDim2.new(0.278846, 0, 0.177914, 0)
+ui_TextButton_18.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_TextButton_18.Visible = true
+ui_TextButton_18.ZIndex = 1
+ui_TextButton_18.ClipsDescendants = false
+ui_TextButton_18.LayoutOrder = 0
+ui_TextButton_18.Text = "Sword"
+ui_TextButton_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_TextButton_18.TextSize = 14
+ui_TextButton_18.TextScaled = false
+ui_TextButton_18.TextWrapped = false
+ui_TextButton_18.TextXAlignment = Enum.TextXAlignment.Center
+ui_TextButton_18.TextYAlignment = Enum.TextYAlignment.Center
+ui_TextButton_18.RichText = false
+ui_TextButton_18.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_TextButton_18.TextTransparency = 0
+ui_TextButton_18.AutoButtonColor = true
+ui_TextButton_18.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_19 = Instance.new("UICorner")
+ui_UICorner_19.Name = "UICorner"
+ui_UICorner_19.CornerRadius = UDim.new(0, 4)
+ui_UICorner_19.Parent = ui_TextButton_18
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_20 = Instance.new("UIStroke")
+ui_UIStroke_20.Name = "UIStroke"
+ui_UIStroke_20.Color = Color3.fromRGB(255, 0, 0)
+ui_UIStroke_20.Thickness = 2
+ui_UIStroke_20.Transparency = 0
+ui_UIStroke_20.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_20.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_20.Parent = ui_TextButton_18
+
+-- إنشاء: ToggleButton (TextButton)
+local ui_ToggleButton_21 = Instance.new("TextButton")
+ui_ToggleButton_21.Name = "ToggleButton"
+ui_ToggleButton_21.AnchorPoint = Vector2.new(0, 0)
+ui_ToggleButton_21.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ui_ToggleButton_21.BackgroundTransparency = 0
+ui_ToggleButton_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_ToggleButton_21.BorderSizePixel = 0
+ui_ToggleButton_21.Position = UDim2.new(0.288732, 0, 0.262357, 0)
+ui_ToggleButton_21.Rotation = 0
+ui_ToggleButton_21.Size = UDim2.new(0.0440141, 0, 0.095057, 0)
+ui_ToggleButton_21.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_ToggleButton_21.Visible = true
+ui_ToggleButton_21.ZIndex = 1
+ui_ToggleButton_21.ClipsDescendants = false
+ui_ToggleButton_21.LayoutOrder = 0
+ui_ToggleButton_21.Text = "A"
+ui_ToggleButton_21.TextColor3 = Color3.fromRGB(255, 0, 0)
+ui_ToggleButton_21.TextSize = 25
+ui_ToggleButton_21.TextScaled = false
+ui_ToggleButton_21.TextWrapped = true
+ui_ToggleButton_21.TextXAlignment = Enum.TextXAlignment.Center
+ui_ToggleButton_21.TextYAlignment = Enum.TextYAlignment.Center
+ui_ToggleButton_21.RichText = false
+ui_ToggleButton_21.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_ToggleButton_21.TextTransparency = 0
+ui_ToggleButton_21.AutoButtonColor = true
+ui_ToggleButton_21.Parent = ui_AutoLevelGui_1
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_22 = Instance.new("UICorner")
+ui_UICorner_22.Name = "UICorner"
+ui_UICorner_22.CornerRadius = UDim.new(0, 8)
+ui_UICorner_22.Parent = ui_ToggleButton_21
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_23 = Instance.new("UIStroke")
+ui_UIStroke_23.Name = "UIStroke"
+ui_UIStroke_23.Color = Color3.fromRGB(255, 0, 0)
+ui_UIStroke_23.Thickness = 2
+ui_UIStroke_23.Transparency = 0
+ui_UIStroke_23.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_23.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_23.Parent = ui_ToggleButton_21
 
 --// ==========================================
 --// البرمجات المدمجة التي كانت داخل الواجهة
@@ -214,32 +373,48 @@ task.spawn(function()
 	
 	local mainButton = script.Parent -- زر التشغيل الرئيسي (Auto Farm Button)
 	
-	-- مسارات الأزرار الثلاثة (قم بتعديل المسار حسب مكان وضعهم في واجهة المستخدم لديك)
+	-- مسارات الأزرار الثلاثة (تأكد من وجودهم داخل نفس واجهة المستخدم)
 	local gui = mainButton.Parent
 	local meleeBtn = gui:WaitForChild("MeleeBtn")
 	local fruitBtn = gui:WaitForChild("FruitBtn")
 	local swordBtn = gui:WaitForChild("SwordBtn")
 	
-	-- تعيين القيمة الافتراضية لـ Attribute الفئة
-	player:SetAttribute("AutoType", "Melee")
+	-- دالة لتحديث ألوان الأزرار (المختار يصبح أخضر، والباقي يرجع للون العادي)
+	local function updateButtonColors(selectedBtn)
+		local buttons = {meleeBtn, fruitBtn, swordBtn}
+		for _, btn in ipairs(buttons) do
+			if btn == selectedBtn then
+				btn.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- لون أخضر عند الاختيار
+			else
+				btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- لون عادي (أبيض أو افتراضي)
+			end
+		end
+	end
 	
-	-- تفعيل الأزرار لاختيار الفئة
+	-- تعيين القيمة الافتراضية واللون الافتراضي (Melee)
+	player:SetAttribute("AutoType", "Melee")
+	updateButtonColors(meleeBtn)
+	
+	-- تفعيل الأزرار واختيار الفئة مع تغيير الألوان
 	meleeBtn.MouseButton1Click:Connect(function()
 		player:SetAttribute("AutoType", "Melee")
+		updateButtonColors(meleeBtn)
 		print("تم اختيار النوع: Melee")
 	end)
 	
 	fruitBtn.MouseButton1Click:Connect(function()
 		player:SetAttribute("AutoType", "Demon Fruit")
+		updateButtonColors(fruitBtn)
 		print("تم اختيار النوع: Demon Fruit")
 	end)
 	
 	swordBtn.MouseButton1Click:Connect(function()
 		player:SetAttribute("AutoType", "Sword")
+		updateButtonColors(swordBtn)
 		print("تم اختيار النوع: Sword")
 	end)
 	
-	-- جدول المهام الشامل لجميع البحار والمستويات من 1 إلى 2800 (مع إحداثيات الـ NPC والـ Spawns)
+	-- جدول المهام الشامل لجميع البحار والمستويات من 1 إلى 2800
 	local questsData = {
 		-- ==================== البحر الأول (First Sea) ====================
 		{minLevel = 1,   maxLevel = 9,   questName = "BanditQuest1",     enemy = "Bandit", npcPos = Vector3.new(105, 17, 1550), spawnPos = Vector3.new(120, 17, 1600)},
@@ -428,75 +603,6 @@ task.spawn(function()
 			unequipAllTools()
 			return
 		end
-	
-		print("تم تفعيل الأوتو فارم حتى المستوى 2800!")
-	
-		task.spawn(function()
-			while isRunning do
-				task.wait(0.5)
-	
-				equipSelectedTool()
-	
-				local dataFolder = player:FindFirstChild("Data")
-				if not dataFolder or not dataFolder:FindFirstChild("Level") then continue end
-	
-				local currentLevel = dataFolder.Level.Value
-	
-				-- تحديد المهمة المناسبة لمستوى اللاعب الحالي
-				local currentQuestData = nil
-				for _, data in ipairs(questsData) do
-					if currentLevel >= data.minLevel and currentLevel <= data.maxLevel then
-						currentQuestData = data
-						break
-					end
-				end
-				-- إذا تجاوز المستوى الأقصى المذكور يأخذ آخر مهمة
-				if not currentQuestData then currentQuestData = questsData[#questsData] end
-	
-				-- الخطوة 1: إذا لم تكن هناك مهمة نشطة، اذهب إلى الـ NPC وخذها
-				if not hasActiveQuest() then
-					print("الذهاب إلى الـ NPC لأخذ المهمة...")
-					customTween(currentQuestData.npcPos, 300)
-					task.wait(0.5)
-	
-					remoteEvent:FireServer("StartQuest", currentQuestData.questName)
-					remoteEvent:FireServer(currentQuestData.questName)
-					task.wait(1.5)
-				else
-					-- الخطوة 2: البحث عن العدو المستهدف
-					local enemy = findTargetEnemy(currentQuestData.enemy)
-	
-					if enemy then
-						local enemyRoot = enemy:FindFirstChild("HumanoidRootPart")
-						local enemyHumanoid = enemy:FindFirstChild("Humanoid")
-	
-						if enemyRoot and enemyHumanoid then
-							-- توسيع حجم الـ Hitbox للعدو لتستطيع ضربه وأنت فوقه بسهولة
-							enemyRoot.Size = Vector3.new(20, 20, 20)
-							enemyRoot.Transparency = 0.9
-							enemyRoot.CanCollide = false
-	
-							-- الانتقال بحركة دائرية تشبه النجمة فوق العدو
-							local angle = tick() * 12
-							local hoverPos = enemyRoot.Position + Vector3.new(math.sin(angle) * 7, 12, math.cos(angle) * 7)
-	
-							local character = player.Character
-							if character and character:FindFirstChild("HumanoidRootPart") then
-								character.HumanoidRootPart.CFrame = CFrame.new(hoverPos, enemyRoot.Position)
-								character.HumanoidRootPart.Velocity = Vector3.new(0, 0, 0)
-							end
-						end
-					else
-						-- الخطوة 3: إذا لم يوجد العدو في مكانه، توجه إلى مكان الترسيب (SpawnPos)
-						print("العدو غير موجود، التوجه إلى مكان الترسيب الخاص به...")
-						customTween(currentQuestData.spawnPos, 300)
-					end
-				end
-			end
-	
-			unequipAllTools()
-		end)
-	end)
 end)
 
 -- تشغيل برمجة: LocalScript
@@ -590,7 +696,7 @@ end)
 
 -- تشغيل برمجة: LocalScript
 task.spawn(function()
-	local script = setmetatable({Parent = ui_ToggleButton_10, Name = "LocalScript"}, {__index = ui_ToggleButton_10})
+	local script = setmetatable({Parent = ui_ToggleButton_21, Name = "LocalScript"}, {__index = ui_ToggleButton_21})
 	-- الحصول على الزر والـ MainFrame
 	local button = script.Parent
 	-- افترضنا أن MainFrame يوجد في نفس الـ ScreenGui (أي بجانب الزر أو أبيه المباشر)
