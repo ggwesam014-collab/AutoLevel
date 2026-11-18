@@ -1,0 +1,344 @@
+--// تم توليد هذا السكربت تلقائياً بواسطة محول الواجهات الذكي
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- إنشاء: AutoLevelGui (ScreenGui)
+local ui_AutoLevelGui_1 = Instance.new("ScreenGui")
+ui_AutoLevelGui_1.Name = "AutoLevelGui"
+ui_AutoLevelGui_1.Enabled = true
+ui_AutoLevelGui_1.ResetOnSpawn = true
+ui_AutoLevelGui_1.IgnoreGuiInset = true
+ui_AutoLevelGui_1.DisplayOrder = 1000
+ui_AutoLevelGui_1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ui_AutoLevelGui_1.Parent = playerGui
+
+-- إنشاء: MainFrame (Frame)
+local ui_MainFrame_2 = Instance.new("Frame")
+ui_MainFrame_2.Name = "MainFrame"
+ui_MainFrame_2.AnchorPoint = Vector2.new(0, 0)
+ui_MainFrame_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ui_MainFrame_2.BackgroundTransparency = 0
+ui_MainFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_MainFrame_2.BorderSizePixel = 0
+ui_MainFrame_2.Position = UDim2.new(0.389965, 0, 0.357414, 0)
+ui_MainFrame_2.Rotation = 0
+ui_MainFrame_2.Size = UDim2.new(0.22007, 0, 0.285171, 0)
+ui_MainFrame_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_MainFrame_2.Visible = true
+ui_MainFrame_2.ZIndex = 1
+ui_MainFrame_2.ClipsDescendants = false
+ui_MainFrame_2.LayoutOrder = 0
+ui_MainFrame_2.Parent = ui_AutoLevelGui_1
+
+-- إنشاء: ToggleBtn (TextButton)
+local ui_ToggleBtn_3 = Instance.new("TextButton")
+ui_ToggleBtn_3.Name = "ToggleBtn"
+ui_ToggleBtn_3.AnchorPoint = Vector2.new(0, 0)
+ui_ToggleBtn_3.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ui_ToggleBtn_3.BackgroundTransparency = 0
+ui_ToggleBtn_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_ToggleBtn_3.BorderSizePixel = 0
+ui_ToggleBtn_3.Position = UDim2.new(0.1, 0, 0.54, 0)
+ui_ToggleBtn_3.Rotation = 0
+ui_ToggleBtn_3.Size = UDim2.new(0.8, 0, 0.333333, 0)
+ui_ToggleBtn_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_ToggleBtn_3.Visible = true
+ui_ToggleBtn_3.ZIndex = 1
+ui_ToggleBtn_3.ClipsDescendants = false
+ui_ToggleBtn_3.LayoutOrder = 0
+ui_ToggleBtn_3.Text = "Start"
+ui_ToggleBtn_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_ToggleBtn_3.TextSize = 25
+ui_ToggleBtn_3.TextScaled = false
+ui_ToggleBtn_3.TextWrapped = false
+ui_ToggleBtn_3.TextXAlignment = Enum.TextXAlignment.Center
+ui_ToggleBtn_3.TextYAlignment = Enum.TextYAlignment.Center
+ui_ToggleBtn_3.RichText = false
+ui_ToggleBtn_3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_ToggleBtn_3.TextTransparency = 0
+ui_ToggleBtn_3.AutoButtonColor = true
+ui_ToggleBtn_3.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_4 = Instance.new("UICorner")
+ui_UICorner_4.Name = "UICorner"
+ui_UICorner_4.CornerRadius = UDim.new(0, 4)
+ui_UICorner_4.Parent = ui_ToggleBtn_3
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_5 = Instance.new("UIStroke")
+ui_UIStroke_5.Name = "UIStroke"
+ui_UIStroke_5.Color = Color3.fromRGB(255, 0, 0)
+ui_UIStroke_5.Thickness = 2
+ui_UIStroke_5.Transparency = 0
+ui_UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_5.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_5.Parent = ui_ToggleBtn_3
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_6 = Instance.new("UICorner")
+ui_UICorner_6.Name = "UICorner"
+ui_UICorner_6.CornerRadius = UDim.new(0, 4)
+ui_UICorner_6.Parent = ui_MainFrame_2
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_7 = Instance.new("UIStroke")
+ui_UIStroke_7.Name = "UIStroke"
+ui_UIStroke_7.Color = Color3.fromRGB(255, 0, 0)
+ui_UIStroke_7.Thickness = 2
+ui_UIStroke_7.Transparency = 0
+ui_UIStroke_7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_7.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_7.Parent = ui_MainFrame_2
+
+-- إنشاء: Title (TextLabel)
+local ui_Title_8 = Instance.new("TextLabel")
+ui_Title_8.Name = "Title"
+ui_Title_8.AnchorPoint = Vector2.new(0, 0)
+ui_Title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ui_Title_8.BackgroundTransparency = 1
+ui_Title_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_Title_8.BorderSizePixel = 0
+ui_Title_8.Position = UDim2.new(0.1, 0, 0.0466667, 0)
+ui_Title_8.Rotation = 0
+ui_Title_8.Size = UDim2.new(0.8, 0, 0.22, 0)
+ui_Title_8.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_Title_8.Visible = true
+ui_Title_8.ZIndex = 1
+ui_Title_8.ClipsDescendants = false
+ui_Title_8.LayoutOrder = 0
+ui_Title_8.Text = "Auto Level"
+ui_Title_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_Title_8.TextSize = 14
+ui_Title_8.TextScaled = true
+ui_Title_8.TextWrapped = true
+ui_Title_8.TextXAlignment = Enum.TextXAlignment.Center
+ui_Title_8.TextYAlignment = Enum.TextYAlignment.Center
+ui_Title_8.RichText = false
+ui_Title_8.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_Title_8.TextTransparency = 0
+ui_Title_8.Parent = ui_MainFrame_2
+
+-- إنشاء: Level (TextLabel)
+local ui_Level_9 = Instance.new("TextLabel")
+ui_Level_9.Name = "Level"
+ui_Level_9.AnchorPoint = Vector2.new(0, 0)
+ui_Level_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ui_Level_9.BackgroundTransparency = 1
+ui_Level_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_Level_9.BorderSizePixel = 0
+ui_Level_9.Position = UDim2.new(0.344, 0, 0.266667, 0)
+ui_Level_9.Rotation = 0
+ui_Level_9.Size = UDim2.new(0.308, 0, 0.113333, 0)
+ui_Level_9.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_Level_9.Visible = true
+ui_Level_9.ZIndex = 1
+ui_Level_9.ClipsDescendants = false
+ui_Level_9.LayoutOrder = 0
+ui_Level_9.Text = "Level: ????"
+ui_Level_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_Level_9.TextSize = 14
+ui_Level_9.TextScaled = true
+ui_Level_9.TextWrapped = true
+ui_Level_9.TextXAlignment = Enum.TextXAlignment.Center
+ui_Level_9.TextYAlignment = Enum.TextYAlignment.Center
+ui_Level_9.RichText = false
+ui_Level_9.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_Level_9.TextTransparency = 0
+ui_Level_9.Parent = ui_MainFrame_2
+
+--// ==========================================
+--// البرمجات المدمجة التي كانت داخل الواجهة
+--// ==========================================
+
+-- تشغيل برمجة: LocalScript
+task.spawn(function()
+	local script = setmetatable({Parent = ui_ToggleBtn_3, Name = "LocalScript"}, {__index = ui_ToggleBtn_3})
+	-- Services
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local RunService = game:GetService("RunService")
+	local Workspace = game:GetService("Workspace")
+	
+	local player = Players.LocalPlayer
+	local remoteEvent = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("AcceptQuestRemote")
+	
+	local button = script.Parent
+	
+	-- جدول المهام الشامل وأسماء الأعداء وأماكن الـ NPCs وأماكن الترسيب (Spawns)
+	local questsData = {
+		{minLevel = 1,   maxLevel = 9,   questName = "BanditQuest1",     enemy = "Bandit", npcPos = Vector3.new(105, 17, 1550), spawnPos = Vector3.new(120, 17, 1600)},
+		{minLevel = 10,  maxLevel = 14,  questName = "MonkeyQuest",      enemy = "Monkey", npcPos = Vector3.new(-1598, 38, 153), spawnPos = Vector3.new(-1650, 38, 120)},
+		{minLevel = 15,  maxLevel = 29,  questName = "GorillaQuest",     enemy = "Gorilla", npcPos = Vector3.new(-1642, 38, 165), spawnPos = Vector3.new(-1700, 38, 200)},
+		{minLevel = 30,  maxLevel = 59,  questName = "PirateQuest",      enemy = "Pirate", npcPos = Vector3.new(-1200, 15, 3800), spawnPos = Vector3.new(-1250, 15, 3900)},
+		{minLevel = 60,  maxLevel = 89,  questName = "BruteQuest",       enemy = "Brute", npcPos = Vector3.new(-1140, 15, 4350), spawnPos = Vector3.new(-1100, 15, 4400)},
+		-- (يمكنك إضافة باقي مهام البحار بنفس الطريقة مع إحداثيات الـ NPC والـ Spawn الخاصة بكل مهمة)
+	}
+	
+	-- دالة Tween مخصصة لتحريك الشخصية بسلاسة إلى أي إحداثيات (Target Position)
+	local function customTween(targetPos, speed)
+		local character = player.Character
+		if not character or not character:FindFirstChild("HumanoidRootPart") then return end
+		local rootPart = character.HumanoidRootPart
+	
+		speed = speed or 250 -- سرعة الحركة
+	
+		local connection
+		connection = RunService.RenderStepped:Connect(function(dt)
+			if not character or not character.Parent or not rootPart.Parent then
+				connection:Disconnect()
+				return
+			end
+	
+			local currentPos = rootPart.Position
+			local distance = (targetPos - currentPos).Magnitude
+	
+			if distance < 5 then
+				rootPart.CFrame = CFrame.new(targetPos)
+				connection:Disconnect()
+			else
+				local direction = (targetPos - currentPos).Unit
+				rootPart.CFrame = CFrame.new(currentPos + direction * math.min(speed * dt, distance))
+				rootPart.Velocity = Vector3.new(0, 0, 0) -- إيقاف الجاذبية أثناء التحليق
+			end
+		end)
+	
+		-- الانتظار حتى ينتهي الـ Tween
+		repeat task.wait() until not connection.Connected
+	end
+	
+	-- دالة تحديد المهمة المناسبة
+	local function getAppropriateQuest(currentLevel)
+		for _, data in ipairs(questsData) do
+			if currentLevel >= data.minLevel and currentLevel <= data.maxLevel then
+				return data
+			end
+		end
+		return questsData[#questsData] -- في حال التجاوز يعيد آخر مهمة
+	end
+	
+	-- هل اللاعب لديه مهمة حالية؟ (تأكد من تعديل المسار حسب نظام اللعبة لديك)
+	local function hasActiveQuest()
+		local questGui = player.PlayerGui:FindFirstChild("QuestGui") -- غيّرها حسب اسم واجهة المهمة لديك
+		if questGui and questGui.Enabled then
+			return true
+		end
+		-- طريقة بديلة فحص مجلد الـ Data
+		local dataFolder = player:FindFirstChild("Data")
+		if dataFolder and dataFolder:FindFirstChild("InQuest") and dataFolder.InQuest.Value == true then
+			return true
+		end
+		return false
+	end
+	
+	-- البحث عن العدو المطلوب في العالم
+	local function findTargetEnemy(enemyName)
+		local enemiesFolder = Workspace:FindFirstChild("Enemies") or Workspace
+		for _, obj in ipairs(enemiesFolder:GetChildren()) do
+			if obj:FindFirstChild("Humanoid") and obj:FindFirstChild("HumanoidRootPart") and obj.Humanoid.Health > 0 then
+				if obj.Name == enemyName or string.find(obj.Name, enemyName) then
+					return obj
+				end
+			end
+		end
+		return nil
+	end
+	
+	local isRunning = false
+	
+	button.MouseButton1Click:Connect(function()
+		if isRunning then return end
+		isRunning = true
+	
+		task.spawn(function()
+			while isRunning do
+				task.wait(0.5)
+	
+				local dataFolder = player:FindFirstChild("Data")
+				if not dataFolder or not dataFolder:FindFirstChild("Level") then continue end
+	
+				local currentLevel = dataFolder.Level.Value
+				local currentQuestData = getAppropriateQuest(currentLevel)
+	
+				-- الخطوة 1: التحقق من وجود مهمة، وإذا لم توجد يذهب للـ NPC
+				if not hasActiveQuest() then
+					print("لا توجد مهمة نشطة، الذهاب إلى الـ NPC...")
+					customTween(currentQuestData.npcPos, 300)
+					task.wait(0.5)
+					remoteEvent:FireServer(currentQuestData.questName)
+					task.wait(1)
+				else
+					-- الخطوة 2: البحث عن العدو المطلوب
+					local enemy = findTargetEnemy(currentQuestData.enemy)
+	
+					if enemy then
+						local enemyRoot = enemy:FindFirstChild("HumanoidRootPart")
+						local enemyHumanoid = enemy:FindFirstChild("Humanoid")
+	
+						if enemyRoot and enemyHumanoid then
+							-- توسيع الـ Hitbox للعدو لكي تستطيع ضربه وأنت فوقه
+							enemyRoot.Size = Vector3.new(15, 15, 15)
+							enemyRoot.Transparency = 0.8
+							enemyRoot.CanCollide = false
+	
+							-- الانتقال بشكل نجمة فوق الـ NPC/العدو
+							local angle = tick() * 10
+							local hoverPos = enemyRoot.Position + Vector3.new(math.sin(angle) * 8, 12, math.cos(angle) * 8)
+	
+							local character = player.Character
+							if character and character:FindFirstChild("HumanoidRootPart") then
+								character.HumanoidRootPart.CFrame = CFrame.new(hoverPos, enemyRoot.Position)
+								character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+							end
+						end
+					else
+						-- الخطوة 3: إذا لم يوجد المطلوب بالمكان، يذهب لمكان الترسيب (SpawnPos)
+						print("المطلوب غير موجود، التوجه إلى مكان الترسيب...")
+						customTween(currentQuestData.spawnPos, 300)
+					end
+				end
+			end
+		end)
+	end)
+end)
+
+-- تشغيل برمجة: LocalScript
+task.spawn(function()
+	local script = setmetatable({Parent = ui_Level_9, Name = "LocalScript"}, {__index = ui_Level_9})
+	-- الحصول على اللاعب المحلي (المستخدم الحالي)
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	-- الـ TextLabel الذي سيتم عرض النص عليه (هنا افترضنا أن السكربت بداخله)
+	local textLabel = script.Parent
+	
+	-- وظيفة لتحديث النص بناءً على القيمة
+	local function updateLevelText(levelValue)
+		if levelValue then
+			textLabel.Text = "Level: " .. tostring(levelValue.Value)
+	
+			-- تحديث النص تلقائياً كلما تغيرت القيمة
+			levelValue.Changed:Connect(function(newValue)
+				textLabel.Text = "Level: " .. tostring(newValue)
+			end)
+		else
+			textLabel.Text = "Level: N/A"
+		end
+	end
+	
+	-- البحث عن مجلد Data وقيمة Level داخله
+	local dataFolder = player:FindFirstChild("Data")
+	if dataFolder then
+		local levelValue = dataFolder:FindFirstChild("Level")
+		updateLevelText(levelValue)
+	else
+		-- إذا لم يكن مجلد Data قد تحميله بعد، ننتظر حتى يتم إنشاؤه
+		player.ChildAdded:Connect(function(child)
+			if child.Name == "Data" then
+				local levelValue = child:WaitForChild("Level", 5)
+				updateLevelText(levelValue)
+			end
+		end)
+	end
+end)
