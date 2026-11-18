@@ -148,6 +148,51 @@ ui_Level_9.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", E
 ui_Level_9.TextTransparency = 0
 ui_Level_9.Parent = ui_MainFrame_2
 
+-- إنشاء: ToggleButton (TextButton)
+local ui_ToggleButton_10 = Instance.new("TextButton")
+ui_ToggleButton_10.Name = "ToggleButton"
+ui_ToggleButton_10.AnchorPoint = Vector2.new(0, 0)
+ui_ToggleButton_10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ui_ToggleButton_10.BackgroundTransparency = 0
+ui_ToggleButton_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_ToggleButton_10.BorderSizePixel = 0
+ui_ToggleButton_10.Position = UDim2.new(0.288732, 0, 0.262357, 0)
+ui_ToggleButton_10.Rotation = 0
+ui_ToggleButton_10.Size = UDim2.new(0.0440141, 0, 0.095057, 0)
+ui_ToggleButton_10.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_ToggleButton_10.Visible = true
+ui_ToggleButton_10.ZIndex = 1
+ui_ToggleButton_10.ClipsDescendants = false
+ui_ToggleButton_10.LayoutOrder = 0
+ui_ToggleButton_10.Text = "A"
+ui_ToggleButton_10.TextColor3 = Color3.fromRGB(255, 0, 0)
+ui_ToggleButton_10.TextSize = 25
+ui_ToggleButton_10.TextScaled = false
+ui_ToggleButton_10.TextWrapped = true
+ui_ToggleButton_10.TextXAlignment = Enum.TextXAlignment.Center
+ui_ToggleButton_10.TextYAlignment = Enum.TextYAlignment.Center
+ui_ToggleButton_10.RichText = false
+ui_ToggleButton_10.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_ToggleButton_10.TextTransparency = 0
+ui_ToggleButton_10.AutoButtonColor = true
+ui_ToggleButton_10.Parent = ui_AutoLevelGui_1
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_11 = Instance.new("UICorner")
+ui_UICorner_11.Name = "UICorner"
+ui_UICorner_11.CornerRadius = UDim.new(0, 8)
+ui_UICorner_11.Parent = ui_ToggleButton_10
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_12 = Instance.new("UIStroke")
+ui_UIStroke_12.Name = "UIStroke"
+ui_UIStroke_12.Color = Color3.fromRGB(255, 0, 0)
+ui_UIStroke_12.Thickness = 2
+ui_UIStroke_12.Transparency = 0
+ui_UIStroke_12.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_12.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_12.Parent = ui_ToggleButton_10
+
 --// ==========================================
 --// البرمجات المدمجة التي كانت داخل الواجهة
 --// ==========================================
@@ -162,27 +207,109 @@ task.spawn(function()
 	local Workspace = game:GetService("Workspace")
 	
 	local player = Players.LocalPlayer
-	local remoteEvent = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("AcceptQuestRemote")
+	local backpack = player:WaitForChild("Backpack")
 	
-	local button = script.Parent
+	-- مسار الريموت إيفينت الخاص بالمهام (UpdateQuest)
+	local remoteEvent = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("UpdateQuest")
 	
-	-- جدول المهام الشامل وأسماء الأعداء وأماكن الـ NPCs وأماكن الترسيب (Spawns)
+	local mainButton = script.Parent -- زر التشغيل الرئيسي (Auto Farm Button)
+	
+	-- مسارات الأزرار الثلاثة (قم بتعديل المسار حسب مكان وضعهم في واجهة المستخدم لديك)
+	local gui = mainButton.Parent
+	local meleeBtn = gui:WaitForChild("MeleeBtn")
+	local fruitBtn = gui:WaitForChild("FruitBtn")
+	local swordBtn = gui:WaitForChild("SwordBtn")
+	
+	-- تعيين القيمة الافتراضية لـ Attribute الفئة
+	player:SetAttribute("AutoType", "Melee")
+	
+	-- تفعيل الأزرار لاختيار الفئة
+	meleeBtn.MouseButton1Click:Connect(function()
+		player:SetAttribute("AutoType", "Melee")
+		print("تم اختيار النوع: Melee")
+	end)
+	
+	fruitBtn.MouseButton1Click:Connect(function()
+		player:SetAttribute("AutoType", "Demon Fruit")
+		print("تم اختيار النوع: Demon Fruit")
+	end)
+	
+	swordBtn.MouseButton1Click:Connect(function()
+		player:SetAttribute("AutoType", "Sword")
+		print("تم اختيار النوع: Sword")
+	end)
+	
+	-- جدول المهام الشامل لجميع البحار والمستويات من 1 إلى 2800 (مع إحداثيات الـ NPC والـ Spawns)
 	local questsData = {
+		-- ==================== البحر الأول (First Sea) ====================
 		{minLevel = 1,   maxLevel = 9,   questName = "BanditQuest1",     enemy = "Bandit", npcPos = Vector3.new(105, 17, 1550), spawnPos = Vector3.new(120, 17, 1600)},
 		{minLevel = 10,  maxLevel = 14,  questName = "MonkeyQuest",      enemy = "Monkey", npcPos = Vector3.new(-1598, 38, 153), spawnPos = Vector3.new(-1650, 38, 120)},
 		{minLevel = 15,  maxLevel = 29,  questName = "GorillaQuest",     enemy = "Gorilla", npcPos = Vector3.new(-1642, 38, 165), spawnPos = Vector3.new(-1700, 38, 200)},
 		{minLevel = 30,  maxLevel = 59,  questName = "PirateQuest",      enemy = "Pirate", npcPos = Vector3.new(-1200, 15, 3800), spawnPos = Vector3.new(-1250, 15, 3900)},
 		{minLevel = 60,  maxLevel = 89,  questName = "BruteQuest",       enemy = "Brute", npcPos = Vector3.new(-1140, 15, 4350), spawnPos = Vector3.new(-1100, 15, 4400)},
-		-- (يمكنك إضافة باقي مهام البحار بنفس الطريقة مع إحداثيات الـ NPC والـ Spawn الخاصة بكل مهمة)
+		{minLevel = 90,  maxLevel = 119, questName = "DesertQuest",      enemy = "Desert Bandit", npcPos = Vector3.new(896, 7, 4388), spawnPos = Vector3.new(920, 7, 4450)},
+		{minLevel = 120, maxLevel = 149, questName = "SnowQuest",        enemy = "Snow Bandit", npcPos = Vector3.new(1386, 87, -1298), spawnPos = Vector3.new(1350, 87, -1350)},
+		{minLevel = 150, maxLevel = 174, questName = "ChiefPettyOfficer",enemy = "Chief Petty Officer", npcPos = Vector3.new(-5035, 21, 4324), spawnPos = Vector3.new(-5100, 21, 4380)},
+		{minLevel = 175, maxLevel = 189, questName = "SkyQuest1",       enemy = "Sky Bandit", npcPos = Vector3.new(-4842, 718, -2622), spawnPos = Vector3.new(-4900, 718, -2700)},
+		{minLevel = 190, maxLevel = 209, questName = "SkyQuest2",       enemy = "Dark Master", npcPos = Vector3.new(-5247, 434, -2256), spawnPos = Vector3.new(-5300, 434, -2300)},
+		{minLevel = 210, maxLevel = 249, questName = "PrisonerQuest",   enemy = "Prisoner", npcPos = Vector3.new(487, 5, 99), spawnPos = Vector3.new(520, 5, 120)},
+		{minLevel = 250, maxLevel = 274, questName = "TogaQuest",       enemy = "Toga Warrior", npcPos = Vector3.new(-1580, 14, -2985), spawnPos = Vector3.new(-1620, 14, -3050)},
+		{minLevel = 275, maxLevel = 299, questName = "ColosseumQuest",  enemy = "Gladiator", npcPos = Vector3.new(-1428, 7, -3000), spawnPos = Vector3.new(-1400, 7, -3100)},
+		{minLevel = 300, maxLevel = 324, questName = "MagmaQuest",      enemy = "Military Soldier", npcPos = Vector3.new(-5315, 12, 8515), spawnPos = Vector3.new(-5400, 12, 8600)},
+		{minLevel = 325, maxLevel = 374, questName = "FishmanQuest",    enemy = "Fishman Warrior", npcPos = Vector3.new(61122, 19, 1569), spawnPos = Vector3.new(61150, 19, 1620)},
+		{minLevel = 375, maxLevel = 399, questName = "WardenQuest",     enemy = "God's Guard", npcPos = Vector3.new(-4721, 845, -1955), spawnPos = Vector3.new(-4780, 845, -2000)},
+		{minLevel = 400, maxLevel = 449, questName = "ImpelQuest",      enemy = "Shanda", npcPos = Vector3.new(-7859, 5545, -381), spawnPos = Vector3.new(-7900, 5545, -450)},
+		{minLevel = 450, maxLevel = 524, questName = "SkyExp1Quest",    enemy = "Royal Squad", npcPos = Vector3.new(-7916, 5635, -1412), spawnPos = Vector3.new(-7980, 5635, -1500)},
+		{minLevel = 525, maxLevel = 624, questName = "SkyExp2Quest",    enemy = "Free Agents", npcPos = Vector3.new(-7935, 5635, -1815), spawnPos = Vector3.new(-8000, 5635, -1900)},
+		{minLevel = 625, maxLevel = 699, questName = "FountainQuest",   enemy = "Galley Pirate", npcPos = Vector3.new(5259, 38, 4050), spawnPos = Vector3.new(5300, 38, 4120)},
+	
+		-- ==================== البحر الثاني (Second Sea) ====================
+		{minLevel = 700, maxLevel = 724, questName = "Area1Quest",      enemy = "Raider", npcPos = Vector3.new(-424, 73, 1836), spawnPos = Vector3.new(-450, 73, 1900)},
+		{minLevel = 725, maxLevel = 749, questName = "Area2Quest",      enemy = "Mercenary", npcPos = Vector3.new(631, 73, 918), spawnPos = Vector3.new(660, 73, 980)},
+		{minLevel = 750, maxLevel = 774, questName = "MarineQuest2",    enemy = "Swan Pirate", npcPos = Vector3.new(877, 141, 1227), spawnPos = Vector3.new(900, 141, 1300)},
+		{minLevel = 775, maxLevel = 799, questName = "KiloQuest",       enemy = "Factory Staff", npcPos = Vector3.new(-278, 44, -305), spawnPos = Vector3.new(-310, 44, -350)},
+		{minLevel = 800, maxLevel = 849, questName = "ZombieQuest",     enemy = "Zombie", npcPos = Vector3.new(-5498, 49, -793), spawnPos = Vector3.new(-5550, 49, -850)},
+		{minLevel = 850, maxLevel = 874, questName = "SnowMountainQuest",enemy = "Vampire", npcPos = Vector3.new(-6060, 16, -1124), spawnPos = Vector3.new(-6120, 16, -1200)},
+		{minLevel = 875, maxLevel = 899, questName = "IceSideQuest",   enemy = "Snow Trooper", npcPos = Vector3.new(620, 402, -5287), spawnPos = Vector3.new(650, 402, -5350)},
+		{minLevel = 900, maxLevel = 949, questName = "HeatQuest",       enemy = "Winter Warrior", npcPos = Vector3.new(573, 402, -5540), spawnPos = Vector3.new(600, 402, -5620)},
+		{minLevel = 950, maxLevel = 974, questName = "MagmaQuest2",     enemy = "Lab Subordinate", npcPos = Vector3.new(-5667, 13, -4930), spawnPos = Vector3.new(-5730, 13, -5000)},
+		{minLevel = 975, maxLevel = 999, questName = "BridgeQuest",     enemy = "Horned Warrior", npcPos = Vector3.new(-6142, 16, -5020), spawnPos = Vector3.new(-6200, 16, -5100)},
+		{minLevel = 1000, maxLevel = 1049, questName = "ShipQuest1",    enemy = "Magma Ninja", npcPos = Vector3.new(923, 125, 32850), spawnPos = Vector3.new(950, 125, 32900)},
+		{minLevel = 1050, maxLevel = 1099, questName = "ShipQuest2",    enemy = "Lava Pirate", npcPos = Vector3.new(923, 125, 32850), spawnPos = Vector3.new(950, 125, 32900)},
+		{minLevel = 1100, maxLevel = 1149, questName = "IceCreamQuest", enemy = "Ship Deck Hand", npcPos = Vector3.new(-6508, 125, -5940), spawnPos = Vector3.new(-6570, 125, -6000)},
+		{minLevel = 1150, maxLevel = 1199, questName = "CakeQuest",     enemy = "Ship Engineer", npcPos = Vector3.new(-6508, 125, -5940), spawnPos = Vector3.new(-6570, 125, -6000)},
+		{minLevel = 1200, maxLevel = 1249, questName = "CandyQuest",    enemy = "Ice Cream Chef", npcPos = Vector3.new(-855, 72, 6080), spawnPos = Vector3.new(-900, 72, 6150)},
+		{minLevel = 1250, maxLevel = 1299, questName = "PeanutQuest",   enemy = "Ice Cream Land Guard", npcPos = Vector3.new(-855, 72, 6080), spawnPos = Vector3.new(-900, 72, 6150)},
+		{minLevel = 1300, maxLevel = 1349, questName = "CakeQuest2",    enemy = "Cookie Guard", npcPos = Vector3.new(-2035, 51, -12150), spawnPos = Vector3.new(-2100, 51, -12200)},
+		{minLevel = 1350, maxLevel = 1399, questName = "NutQuest",      enemy = "Baking Staff", npcPos = Vector3.new(-2035, 51, -12150), spawnPos = Vector3.new(-2100, 51, -12200)},
+		{minLevel = 1400, maxLevel = 1424, questName = "ChocolateQuest",enemy = "Sweet Thief", npcPos = Vector3.new(-9500, 173, 5690), spawnPos = Vector3.new(-9550, 173, 5750)},
+		{minLevel = 1425, maxLevel = 1499, questName = "SmashQuest",    enemy = "Candy Rebel", npcPos = Vector3.new(-9500, 173, 5690), spawnPos = Vector3.new(-9550, 173, 5750)},
+	
+		-- ==================== البحر الثالث (Third Sea) ====================
+		{minLevel = 1500, maxLevel = 1574, questName = "PiratePortQuest", enemy = "Pirate Millionaire", npcPos = Vector3.new(-290, 43, 5345), spawnPos = Vector3.new(-330, 43, 5400)},
+		{minLevel = 1575, maxLevel = 1624, questName = "AmazonQuest",     enemy = "Island Outlaw", npcPos = Vector3.new(5450, 600, 755), spawnPos = Vector3.new(5500, 600, 800)},
+		{minLevel = 1625, maxLevel = 1699, questName = "MarineTreeIslandQuest", enemy = "Forest Pirate", npcPos = Vector3.new(2465, 73, -6790), spawnPos = Vector3.new(2520, 73, -6850)},
+		{minLevel = 1700, maxLevel = 1749, questName = "DeepForestIslandQuest", enemy = "Mythological Pirate", npcPos = Vector3.new(-10577, 331, -8810), spawnPos = Vector3.new(-10630, 331, -8900)},
+		{minLevel = 1750, maxLevel = 1799, questName = "DeepForestIslandQuest2", enemy = "Jungle Pirate", npcPos = Vector3.new(-10577, 331, -8810), spawnPos = Vector3.new(-10630, 331, -8900)},
+		{minLevel = 1800, maxLevel = 1849, questName = "HauntedQuest1",   enemy = "Musketeer Pirate", npcPos = Vector3.new(9514, 142, 6215), spawnPos = Vector3.new(9570, 142, 6300)},
+		{minLevel = 1850, maxLevel = 1899, questName = "HauntedQuest2",   enemy = "Reborn Skeleton", npcPos = Vector3.new(9514, 142, 6215), spawnPos = Vector3.new(9570, 142, 6300)},
+		{minLevel = 1900, maxLevel = 1949, questName = "NutsIslandQuest", enemy = "Living Zombie", npcPos = Vector3.new(-9515, 173, 6078), spawnPos = Vector3.new(-9580, 173, 6150)},
+		{minLevel = 1950, maxLevel = 1999, questName = "NutsIslandQuest2", enemy = "Demonic Soul", npcPos = Vector3.new(-9515, 173, 6078), spawnPos = Vector3.new(-9580, 173, 6150)},
+		{minLevel = 2000, maxLevel = 2049, questName = "IceCreamIslandQuest", enemy = "Posessed Mummy", npcPos = Vector3.new(78, 70, -11245), spawnPos = Vector3.new(120, 70, -11300)},
+		{minLevel = 2050, maxLevel = 2099, questName = "IceCreamIslandQuest2", enemy = "Peanut Scout", npcPos = Vector3.new(78, 70, -11245), spawnPos = Vector3.new(120, 70, -11300)},
+		{minLevel = 2100, maxLevel = 2149, questName = "CakeIslandQuest",  enemy = "Peanut Connoisseur", npcPos = Vector3.new(-2120, 37, -10220), spawnPos = Vector3.new(-2180, 37, -10300)},
+		{minLevel = 2150, maxLevel = 2249, questName = "CakeIslandQuest2",  enemy = "Cocoa Warrior", npcPos = Vector3.new(-2120, 37, -10220), spawnPos = Vector3.new(-2180, 37, -10300)},
+		{minLevel = 2250, maxLevel = 2349, questName = "TikiQuest1",      enemy = "Chocolate Bar Battler", npcPos = Vector3.new(-12500, 330, -14900), spawnPos = Vector3.new(-12580, 330, -15000)},
+		{minLevel = 2350, maxLevel = 2800, questName = "TikiQuest2",      enemy = "Sweet Staff", npcPos = Vector3.new(-12500, 330, -14900), spawnPos = Vector3.new(-12580, 330, -15000)}
 	}
 	
-	-- دالة Tween مخصصة لتحريك الشخصية بسلاسة إلى أي إحداثيات (Target Position)
+	-- دالة Tween مخصصة وسلسة للشخصية
 	local function customTween(targetPos, speed)
 		local character = player.Character
 		if not character or not character:FindFirstChild("HumanoidRootPart") then return end
 		local rootPart = character.HumanoidRootPart
 	
-		speed = speed or 250 -- سرعة الحركة
+		speed = speed or 250
 	
 		local connection
 		connection = RunService.RenderStepped:Connect(function(dt)
@@ -200,31 +327,20 @@ task.spawn(function()
 			else
 				local direction = (targetPos - currentPos).Unit
 				rootPart.CFrame = CFrame.new(currentPos + direction * math.min(speed * dt, distance))
-				rootPart.Velocity = Vector3.new(0, 0, 0) -- إيقاف الجاذبية أثناء التحليق
+				rootPart.Velocity = Vector3.new(0, 0, 0)
 			end
 		end)
 	
-		-- الانتظار حتى ينتهي الـ Tween
 		repeat task.wait() until not connection.Connected
 	end
 	
-	-- دالة تحديد المهمة المناسبة
-	local function getAppropriateQuest(currentLevel)
-		for _, data in ipairs(questsData) do
-			if currentLevel >= data.minLevel and currentLevel <= data.maxLevel then
-				return data
-			end
-		end
-		return questsData[#questsData] -- في حال التجاوز يعيد آخر مهمة
-	end
-	
-	-- هل اللاعب لديه مهمة حالية؟ (تأكد من تعديل المسار حسب نظام اللعبة لديك)
+	-- التحقق مما إذا كان اللاعب لديه مهمة نشطة حالياً
 	local function hasActiveQuest()
-		local questGui = player.PlayerGui:FindFirstChild("QuestGui") -- غيّرها حسب اسم واجهة المهمة لديك
+		local questGui = player.PlayerGui:FindFirstChild("QuestGui") 
 		if questGui and questGui.Enabled then
 			return true
 		end
-		-- طريقة بديلة فحص مجلد الـ Data
+	
 		local dataFolder = player:FindFirstChild("Data")
 		if dataFolder and dataFolder:FindFirstChild("InQuest") and dataFolder.InQuest.Value == true then
 			return true
@@ -245,31 +361,109 @@ task.spawn(function()
 		return nil
 	end
 	
+	-- إمساك الأداة تلقائياً بناءً على الـ Attribute المختار
+	local function equipSelectedTool()
+		local character = player.Character
+		if not character then return end
+	
+		local currentType = player:GetAttribute("AutoType") or "Melee"
+		local foundTool = nil
+	
+		for _, tool in ipairs(character:GetChildren()) do
+			if tool:IsA("Tool") then
+				foundTool = tool
+				break
+			end
+		end
+	
+		if not foundTool then
+			for _, tool in ipairs(backpack:GetChildren()) do
+				if tool:IsA("Tool") then
+					if currentType == "Melee" and (tool.Name:lower():find("fist") or tool.Name:lower():find("combat") or tool.Name:lower():find("leg") or tool.Name:lower():find("melee") or tool:FindFirstChild("Level")) then
+						foundTool = tool
+						break
+					elseif currentType == "Demon Fruit" and (tool.Name:lower():find("fruit") or tool.Name:lower():find("flame") or tool.Name:lower():find("ice") or tool.Name:lower():find("magma") or tool.Name:lower():find("light")) then
+						foundTool = tool
+						break
+					elseif currentType == "Sword" and tool.Name:lower():find("sword") then
+						foundTool = tool
+						break
+					end
+				end
+			end
+		end
+	
+		if not foundTool and #backpack:GetChildren() > 0 then
+			for _, tool in ipairs(backpack:GetChildren()) do
+				if tool:IsA("Tool") then
+					foundTool = tool
+					break
+				end
+			end
+		end
+	
+		if foundTool and foundTool.Parent == backpack then
+			foundTool.Parent = character
+		end
+	end
+	
+	-- إفلات الأداة عند إيقاف الفارم
+	local function unequipAllTools()
+		local character = player.Character
+		if not character then return end
+		for _, tool in ipairs(character:GetChildren()) do
+			if tool:IsA("Tool") then
+				tool.Parent = backpack
+			end
+		end
+	end
+	
 	local isRunning = false
 	
-	button.MouseButton1Click:Connect(function()
-		if isRunning then return end
-		isRunning = true
+	mainButton.MouseButton1Click:Connect(function()
+		isRunning = not isRunning
+	
+		if not isRunning then
+			print("تم إيقاف الأوتو فارم.")
+			unequipAllTools()
+			return
+		end
+	
+		print("تم تفعيل الأوتو فارم حتى المستوى 2800!")
 	
 		task.spawn(function()
 			while isRunning do
 				task.wait(0.5)
 	
+				equipSelectedTool()
+	
 				local dataFolder = player:FindFirstChild("Data")
 				if not dataFolder or not dataFolder:FindFirstChild("Level") then continue end
 	
 				local currentLevel = dataFolder.Level.Value
-				local currentQuestData = getAppropriateQuest(currentLevel)
 	
-				-- الخطوة 1: التحقق من وجود مهمة، وإذا لم توجد يذهب للـ NPC
+				-- تحديد المهمة المناسبة لمستوى اللاعب الحالي
+				local currentQuestData = nil
+				for _, data in ipairs(questsData) do
+					if currentLevel >= data.minLevel and currentLevel <= data.maxLevel then
+						currentQuestData = data
+						break
+					end
+				end
+				-- إذا تجاوز المستوى الأقصى المذكور يأخذ آخر مهمة
+				if not currentQuestData then currentQuestData = questsData[#questsData] end
+	
+				-- الخطوة 1: إذا لم تكن هناك مهمة نشطة، اذهب إلى الـ NPC وخذها
 				if not hasActiveQuest() then
-					print("لا توجد مهمة نشطة، الذهاب إلى الـ NPC...")
+					print("الذهاب إلى الـ NPC لأخذ المهمة...")
 					customTween(currentQuestData.npcPos, 300)
 					task.wait(0.5)
+	
+					remoteEvent:FireServer("StartQuest", currentQuestData.questName)
 					remoteEvent:FireServer(currentQuestData.questName)
-					task.wait(1)
+					task.wait(1.5)
 				else
-					-- الخطوة 2: البحث عن العدو المطلوب
+					-- الخطوة 2: البحث عن العدو المستهدف
 					local enemy = findTargetEnemy(currentQuestData.enemy)
 	
 					if enemy then
@@ -277,28 +471,30 @@ task.spawn(function()
 						local enemyHumanoid = enemy:FindFirstChild("Humanoid")
 	
 						if enemyRoot and enemyHumanoid then
-							-- توسيع الـ Hitbox للعدو لكي تستطيع ضربه وأنت فوقه
-							enemyRoot.Size = Vector3.new(15, 15, 15)
-							enemyRoot.Transparency = 0.8
+							-- توسيع حجم الـ Hitbox للعدو لتستطيع ضربه وأنت فوقه بسهولة
+							enemyRoot.Size = Vector3.new(20, 20, 20)
+							enemyRoot.Transparency = 0.9
 							enemyRoot.CanCollide = false
 	
-							-- الانتقال بشكل نجمة فوق الـ NPC/العدو
-							local angle = tick() * 10
-							local hoverPos = enemyRoot.Position + Vector3.new(math.sin(angle) * 8, 12, math.cos(angle) * 8)
+							-- الانتقال بحركة دائرية تشبه النجمة فوق العدو
+							local angle = tick() * 12
+							local hoverPos = enemyRoot.Position + Vector3.new(math.sin(angle) * 7, 12, math.cos(angle) * 7)
 	
 							local character = player.Character
 							if character and character:FindFirstChild("HumanoidRootPart") then
 								character.HumanoidRootPart.CFrame = CFrame.new(hoverPos, enemyRoot.Position)
-								character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+								character.HumanoidRootPart.Velocity = Vector3.new(0, 0, 0)
 							end
 						end
 					else
-						-- الخطوة 3: إذا لم يوجد المطلوب بالمكان، يذهب لمكان الترسيب (SpawnPos)
-						print("المطلوب غير موجود، التوجه إلى مكان الترسيب...")
+						-- الخطوة 3: إذا لم يوجد العدو في مكانه، توجه إلى مكان الترسيب (SpawnPos)
+						print("العدو غير موجود، التوجه إلى مكان الترسيب الخاص به...")
 						customTween(currentQuestData.spawnPos, 300)
 					end
 				end
 			end
+	
+			unequipAllTools()
 		end)
 	end)
 end)
@@ -341,4 +537,113 @@ task.spawn(function()
 			end
 		end)
 	end
+end)
+
+-- تشغيل برمجة: LocalScript
+task.spawn(function()
+	local script = setmetatable({Parent = ui_MainFrame_2, Name = "LocalScript"}, {__index = ui_MainFrame_2})
+	-- الحصول على الـ Frame الذي يحتوي على السكربت
+	local frame = script.Parent
+	local userInputService = game:GetService("UserInputService")
+	
+	local dragging = false
+	local dragInput, mousePos, framePos
+	
+	-- دالة لبدء السحب
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			mousePos = input.Position
+			framePos = frame.Position
+	
+			-- الاستماع لتغير موضع الإدخال أثناء الضغط
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	-- الاستماع لحركة الماوس أو الإصبع
+	userInputService.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	-- تحديث موقع الFrame بسلاسة أثناء التحريك
+	game:GetService("RunService").RenderStepped:Connect(function()
+		if dragging and dragInput then
+			local delta = dragInput.Position - mousePos
+	
+			-- تحديث الموقع باستخدام UDim2 مع الحفاظ على مقاييس الـ Scale والـ Offset
+			frame.Position = UDim2.new(
+				framePos.X.Scale, 
+				framePos.X.Offset + delta.X, 
+				framePos.Y.Scale, 
+				framePos.Y.Offset + delta.Y
+			)
+		end
+	end)
+end)
+
+-- تشغيل برمجة: LocalScript
+task.spawn(function()
+	local script = setmetatable({Parent = ui_ToggleButton_10, Name = "LocalScript"}, {__index = ui_ToggleButton_10})
+	-- الحصول على الزر والـ MainFrame
+	local button = script.Parent
+	-- افترضنا أن MainFrame يوجد في نفس الـ ScreenGui (أي بجانب الزر أو أبيه المباشر)
+	local mainFrame = button.Parent:WaitForChild("MainFrame")
+	local userInputService = game:GetService("UserInputService")
+	
+	local dragging = false
+	local dragInput, mousePos, buttonPos
+	local hasMoved =لـ false -- للتمييز بين النقر (Click) والسحب (Drag)
+	
+	-- 1. كود السحب والإفلات (Draggable)
+	button.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			hasMoved = false
+			mousePos = input.Position
+			buttonPos = button.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	userInputService.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	game:GetService("RunService").RenderStepped:Connect(function()
+		if dragging and dragInput then
+			local delta = dragInput.Position - mousePos
+			-- إذا تحرك الماوس مسافة بسيطة، نعتبره عملية سحب وليس ضغطاً عادياً
+			if math.abs(delta.X) > 3 or math.abs(delta.Y) > 3 then
+				hasMoved = true
+			end
+	
+			button.Position = UDim2.new(
+				buttonPos.X.Scale, 
+				buttonPos.X.Offset + delta.X, 
+				buttonPos.Y.Scale, 
+				buttonPos.Y.Offset + delta.Y
+			)
+		end
+	end)
+	
+	-- 2. كود الـ Toggle للـ MainFrame عند الضغط (إذا لم يتم سحبه)
+	button.MouseButton1Click:Connect(function()
+		if not hasMoved then
+			mainFrame.Visible = not mainFrame.Visible
+		end
+	end)
 end)
