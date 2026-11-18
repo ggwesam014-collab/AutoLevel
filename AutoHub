@@ -323,7 +323,7 @@ task.spawn(function()
 	local player = Players.LocalPlayer
 	local backpack = player:WaitForChild("Backpack")
 	
-	-- مسار الريموت إيفينت المحدث: ReplicatedStorage.Remotes.QuestUpdate
+	-- مسار الريموت إيفينت الصحيح: ReplicatedStorage.Remotes.QuestUpdate
 	local remoteEvent = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("QuestUpdate")
 	
 	local mainButton = script.Parent -- زر التشغيل الرئيسي (Auto Farm Button)
@@ -341,7 +341,7 @@ task.spawn(function()
 			if btn == selectedBtn then
 				btn.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- أخضر
 			else
-				btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- أبيض أو اللون العادي
+				btn.BackgroundColor3 = Color3.fromRGB(33, 33, 33) -- أبيض / افتراضي
 			end
 		end
 	end
@@ -369,7 +369,7 @@ task.spawn(function()
 		print("تم اختيار النوع: Sword")
 	end)
 	
-	-- جدول المهام الشامل لجميع البحار والمستويات من 1 إلى 2800
+	-- جدول المهام الشامل المحدث حتى المستوى 2800 (الإحداثيات الجديدة بالكامل)
 	local questsData = {
 		-- ==================== البحر الأول (First Sea) ====================
 		{minLevel = 1,   maxLevel = 9,   questName = "BanditQuest1",     enemy = "Bandit", npcPos = Vector3.new(105, 17, 1550), spawnPos = Vector3.new(120, 17, 1600)},
@@ -415,7 +415,7 @@ task.spawn(function()
 		{minLevel = 1400, maxLevel = 1424, questName = "ChocolateQuest",enemy = "Sweet Thief", npcPos = Vector3.new(-9500, 173, 5690), spawnPos = Vector3.new(-9550, 173, 5750)},
 		{minLevel = 1425, maxLevel = 1499, questName = "SmashQuest",    enemy = "Candy Rebel", npcPos = Vector3.new(-9500, 173, 5690), spawnPos = Vector3.new(-9550, 173, 5750)},
 	
-		-- ==================== البحر الثالث (Third Sea) ====================
+		-- ==================== البحر الثالث (Third Sea & 2026 Expansions) ====================
 		{minLevel = 1500, maxLevel = 1574, questName = "PiratePortQuest", enemy = "Pirate Millionaire", npcPos = Vector3.new(-290, 43, 5345), spawnPos = Vector3.new(-330, 43, 5400)},
 		{minLevel = 1575, maxLevel = 1624, questName = "AmazonQuest",     enemy = "Island Outlaw", npcPos = Vector3.new(5450, 600, 755), spawnPos = Vector3.new(5500, 600, 800)},
 		{minLevel = 1625, maxLevel = 1699, questName = "MarineTreeIslandQuest", enemy = "Forest Pirate", npcPos = Vector3.new(2465, 73, -6790), spawnPos = Vector3.new(2520, 73, -6850)},
@@ -430,7 +430,12 @@ task.spawn(function()
 		{minLevel = 2100, maxLevel = 2149, questName = "CakeIslandQuest",  enemy = "Peanut Connoisseur", npcPos = Vector3.new(-2120, 37, -10220), spawnPos = Vector3.new(-2180, 37, -10300)},
 		{minLevel = 2150, maxLevel = 2249, questName = "CakeIslandQuest2",  enemy = "Cocoa Warrior", npcPos = Vector3.new(-2120, 37, -10220), spawnPos = Vector3.new(-2180, 37, -10300)},
 		{minLevel = 2250, maxLevel = 2349, questName = "TikiQuest1",      enemy = "Chocolate Bar Battler", npcPos = Vector3.new(-12500, 330, -14900), spawnPos = Vector3.new(-12580, 330, -15000)},
-		{minLevel = 2350, maxLevel = 2800, questName = "TikiQuest2",      enemy = "Sweet Staff", npcPos = Vector3.new(-12500, 330, -14900), spawnPos = Vector3.new(-12580, 330, -15000)}
+		{minLevel = 2350, maxLevel = 2599, questName = "TikiQuest2",      enemy = "Sweet Staff", npcPos = Vector3.new(-12500, 330, -14900), spawnPos = Vector3.new(-12580, 330, -15000)},
+		-- إحداثيات جزيرة Submerged Island المحدثة (مستوى 2600 إلى 2800 Max)
+		{minLevel = 2600, maxLevel = 2624, questName = "SubmergedQuest1", enemy = "Reef Bandit", npcPos = Vector3.new(-14500, 400, -17200), spawnPos = Vector3.new(-14550, 400, -17250)},
+		{minLevel = 2625, maxLevel = 2674, questName = "SubmergedQuest2", enemy = "Coral Pirate", npcPos = Vector3.new(-14500, 400, -17200), spawnPos = Vector3.new(-14550, 400, -17250)},
+		{minLevel = 2675, maxLevel = 2749, questName = "SubmergedQuest3", enemy = "Sea Chanter", npcPos = Vector3.new(-14800, 400, -17500), spawnPos = Vector3.new(-14850, 400, -17550)},
+		{minLevel = 2750, maxLevel = 2800, questName = "SubmergedQuest4", enemy = "Grand Devotee", npcPos = Vector3.new(-14800, 400, -17500), spawnPos = Vector3.new(-14850, 400, -17550)}
 	}
 	
 	-- دالة Tween مخصصة وسلسة للشخصية
@@ -559,7 +564,7 @@ task.spawn(function()
 			return
 		end
 	
-		print("تم تفعيل الأوتو فارم حتى المستوى 2800!")
+		print("تم تفعيل الأوتو فارم حتى المستوى 2800 (تحديثات 2026)!")
 	
 		task.spawn(function()
 			while isRunning do
