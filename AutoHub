@@ -323,8 +323,8 @@ task.spawn(function()
 	local player = Players.LocalPlayer
 	local backpack = player:WaitForChild("Backpack")
 	
-	-- مسار الريموت إيفينت الخاص بالمهام (UpdateQuest)
-	local remoteEvent = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("UpdateQuest")
+	-- مسار الريموت إيفينت المحدث: ReplicatedStorage.Remotes.SubclassNetwork.QuestUpdate
+	local remoteEvent = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("SubclassNetwork"):WaitForChild("QuestUpdate")
 	
 	local mainButton = script.Parent -- زر التشغيل الرئيسي (Auto Farm Button)
 	
@@ -334,19 +334,19 @@ task.spawn(function()
 	local fruitBtn = gui:WaitForChild("FruitBtn")
 	local swordBtn = gui:WaitForChild("SwordBtn")
 	
-	-- دالة لتحديث ألوان الأزرار (المختار يصبح أخضر، والباقي يرجع للون العادي)
+	-- دالة لتحديث ألوان الأزرار (المختار أخضر والباقي يرجع للون العادي)
 	local function updateButtonColors(selectedBtn)
 		local buttons = {meleeBtn, fruitBtn, swordBtn}
 		for _, btn in ipairs(buttons) do
 			if btn == selectedBtn then
-				btn.BackgroundColor3 = Color3.fromRGB(44, 255, 29) -- أخضر
+				btn.BackgroundColor3 = Color3.fromRGB(100, 255, 65) -- أخضر
 			else
 				btn.BackgroundColor3 = Color3.fromRGB(33, 33, 33) -- أبيض أو اللون الافتراضي
 			end
 		end
 	end
 	
-	-- تعيين القيمة الافتراضية واللون الافتراضي (Melee)
+	-- تعيين القيمة واللون الافتراضي (Melee)
 	player:SetAttribute("AutoType", "Melee")
 	updateButtonColors(meleeBtn)
 	
@@ -582,7 +582,7 @@ task.spawn(function()
 				end
 				if not currentQuestData then currentQuestData = questsData[#questsData] end
 	
-				-- الخطوة 1: إذا لم تكن هناك مهمة نشطة، اذهب إلى الـ NPC وخذها
+				-- الخطوة 1: إذا لم تكن هناك مهمة نشطة، اذهب إلى الـ NPC وخذها عبر ريموت QuestUpdate
 				if not hasActiveQuest() then
 					print("الذهاب إلى الـ NPC لأخذ المهمة...")
 					customTween(currentQuestData.npcPos, 300)
@@ -625,7 +625,7 @@ task.spawn(function()
 	
 			unequipAllTools()
 		end)
-	end) -- النهاية الصحيحة لـ MouseButton1Click
+	end)
 end)
 
 -- تشغيل برمجة: LocalScript
